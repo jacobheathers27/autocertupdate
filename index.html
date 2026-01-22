@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCertUpdate - Automated SSL/TLS Certificate Management</title>
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AutoCertUpdate</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="cta-button">Start Free Trial</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#" class="cta-button">Start Free Trial</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-backgrounds">
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Automated SSL/TLS Certificate Management at Scale</h1>
+            <p class="hero-subtitle">Eliminate certificate expiration downtime with intelligent automation. Manage, renew, and deploy certificates across your entire infrastructure seamlessly.</p>
+            <a href="#" class="cta-button" style="font-size: 1.1rem; padding: 0.75rem 2rem;">Get Started Free</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="features-header">
+                <h2>Complete Certificate Lifecycle Management</h2>
+                <p class="features-subtitle">Comprehensive tools designed to automate, monitor, and optimize your SSL/TLS certificate infrastructure</p>
+            </div>
+            
+            <div class="features-layout">
+                <!-- Two Column Features -->
+                <div class="features-two-col">
+                    <div class="feature-card-large">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Enterprise-Grade Certificate Security</h3>
+                        <p>Protect your SSL/TLS certificates with military-grade encryption and secure key storage. Compliant with industry standards including NIST, FIPS 140-2, and HSM integration capabilities.</p>
+                        <ul class="feature-checklist">
+                            <li>Hardware Security Module (HSM) support</li>
+                            <li>End-to-end certificate encryption</li>
+                            <li>Compliance with NIST & FIPS standards</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card-large">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Automated Renewal & Deployment</h3>
+                        <p>Automatically renew certificates before expiration and deploy across your infrastructure instantly. Real-time monitoring ensures zero downtime and seamless certificate rotation.</p>
+                        <ul class="feature-checklist">
+                            <li>Automated ACME protocol integration</li>
+                            <li>Multi-CDN deployment support</li>
+                            <li>Real-time renewal notifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Four Column Features -->
+                <div class="features-four-col">
+                    <div class="feature-card-small">
+                        <div class="feature-icon-small">🚀</div>
+                        <h4>Instant Deployment</h4>
+                        <p>Deploy renewed certificates across load balancers, web servers, and cloud platforms in seconds.</p>
+                    </div>
+                    <div class="feature-card-small">
+                        <div class="feature-icon-small">📊</div>
+                        <h4>Certificate Analytics</h4>
+                        <p>Track certificate inventory, expiration dates, and compliance metrics with detailed reporting.</p>
+                    </div>
+                    <div class="feature-card-small">
+                        <div class="feature-icon-small">🔄</div>
+                        <h4>Multi-Cloud Support</h4>
+                        <p>Manage certificates across AWS, Azure, GCP, and hybrid infrastructures seamlessly.</p>
+                    </div>
+                    <div class="feature-card-small">
+                        <div class="feature-icon-small">🌐</div>
+                        <h4>RESTful API</h4>
+                        <p>Integrate certificate management into your CI/CD pipelines with comprehensive REST API.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-header">
+            <h2>Transparent Pricing for All Scale</h2>
+            <p class="hero-subtitle">Flexible plans based on the number of certificates and domains you need to manage</p>
+        </div>
+
+        <div class="pricing-calculator">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Number of Domains</span>
+                    <span id="teamSize">10</span>
+                </div>
+                <input type="range" class="slider" id="teamSlider" min="1" max="100" value="10">
+            </div>
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>API Calls/Month</span>
+                    <span id="storageSize">500</span>
+                </div>
+                <input type="range" class="slider" id="storageSlider" min="100" max="5000" step="100" value="500">
+            </div>
+        </div>
+
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3 class="plan-name">Starter</h3>
+                <div class="plan-price">$<span id="starterPrice">29</span><span>/month</span></div>
+                <ul class="plan-features">
+                    <li>Up to 10 domains</li>
+                    <li>Automated renewals</li>
+                    <li>Email notifications</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Starter</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <h3 class="plan-name">Professional</h3>
+                <div class="plan-price">$<span id="proPrice">149</span><span>/month</span></div>
+                <ul class="plan-features">
+                    <li>Up to 50 domains</li>
+                    <li>Multi-cloud deployment</li>
+                    <li>Advanced analytics</li>
+                    <li>Priority support</li>
+                    <li>Full REST API access</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Professional</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3 class="plan-name">Enterprise</h3>
+                <div class="plan-price">$<span id="enterprisePrice">299</span><span>/month</span></div>
+                <ul class="plan-features">
+                    <li>Unlimited domains</li>
+                    <li>HSM integration</li>
+                    <li>Custom deployment rules</li>
+                    <li>24/7 phone support</li>
+                    <li>Dedicated DevOps engineer</li>
+                </ul>
+                <a href="#" class="cta-button">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Trusted by Enterprise Organizations Globally</h2>
+                <p class="about-subtitle">Since 2020, we've been automating SSL/TLS certificate management for enterprises handling millions of certificates daily.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">99.99%</div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Certificates Managed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10M+</div>
+                        <div class="stat-label">Auto-Renewals Monthly</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Zero</div>
+                        <div class="stat-label">Cert Expirations</div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <p>AutoCertUpdate was founded to solve the critical pain point of SSL/TLS certificate management at scale. Certificate expiration is one of the leading causes of unexpected outages. We built AutoCertUpdate to make certificate automation simple, reliable, and affordable for organizations of all sizes.</p>
+                    <p>Our team of cryptography experts, DevOps engineers, and security architects continuously monitor threats and maintain our platform to ensure your certificates are always valid and deployed correctly. With AutoCertUpdate, you can focus on building your applications while we handle the certificate lifecycle automatically and securely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Start Your Free Trial</h2>
+                <p class="contact-subtitle">Have questions about certificate automation? Reach out to our team. We'll respond within 24 hours and can arrange a personalized demo.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h3>Request Information</h3>
+                        <p>Tell us about your certificate infrastructure and we'll recommend the best plan for your organization.</p>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" placeholder="Your Company (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">How can we help?</label>
+                            <select id="subject">
+                                <option value="">Select a Topic</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="9" placeholder="Tell us more about your needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="quick-contact">
+                        <h3>Quick Contact</h3>
+                        <div class="contact-methods">
+                            <a href="mailto:support@autocertupdate.com" class="contact-method">
+                                <span class="method-icon">📧</span>
+                                <div class="method-details">
+                                    <strong>Email Us</strong>
+                                    <span>support@autocertupdate.com</span>
+                                </div>
+                            </a>
+                            <a href="#" class="contact-method">
+                                <span class="method-icon">💬</span>
+                                <div class="method-details">
+                                    <strong>Live Chat</strong>
+                                    <span>Available 9AM-6PM EST</span>
+                                </div>
+                            </a>
+                            <a href="tel:+15551234567" class="contact-method">
+                                <span class="method-icon">📱</span>
+                                <div class="method-details">
+                                    <strong>Call Us</strong>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="office-locations">
+                        <h3>Our Offices</h3>
+                        <div class="location-grid">
+                            <div class="location">
+                                <strong>🇺🇸 San Francisco</strong>
+                                <p>123 Market Street<br>Suite 400, CA 94105</p>
+                            </div>
+                            <div class="location">
+                                <strong>🇬🇧 London</strong>
+                                <p>45 Fleet Street<br>London EC4Y 1BJ</p>
+                            </div>
+                            <div class="location">
+                                <strong>🇸🇬 Singapore</strong>
+                                <p>1 Raffles Place<br>Tower 1, #40-02</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">AutoCertUpdate</div>
+                    <p>Automated SSL/TLS certificate management for enterprise infrastructure</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Security</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Press</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">API Reference</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AutoCertUpdate. All rights reserved. | Building the future of certificate automation</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
